@@ -1,0 +1,23 @@
+<%# views/login.ejs %>
+
+<% extend('layout') %>
+
+<div class='container'>
+  <form class="form-group" action='/register' method="post">
+
+    <h1>Log In</h1>
+
+    <label for="username">Enter a Username</label>
+    <input type='text' name='username' method='post'>
+
+    <label for="password">Enter a Password</label>
+    <input type='text' name='password' method='post'>
+
+
+    <label for="confirm">Confirm your Password</label>
+    <input type='text' name='confirm' method='post'>
+    <br>
+    <button class='btn btn-primary' type="submit" name="submit">Submit</button>
+
+  </form>
+</div>
