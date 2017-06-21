@@ -11,10 +11,22 @@
     <style>
 
       header {
-        height: 150px;
+        height: 45vh;
         display:flex;
-        background-image: url('../header_image.png')
-}
+        background-color: #00babf;
+      }
+
+
+      .navbar {
+        display: flex;
+        align-items: center;
+
+      }
+
+      ul{
+        
+      }
+
       .form-group {
         display:flex;
         flex-direction: column;
@@ -34,7 +46,14 @@
   <body>
 
     <header>
+      <nav class="navbar navbar-inverse">
+        <h1 class="navbar-text">poLLit</h1>
+        <ul class="nav navbar-nav">
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+        </ul>
 
+      </nav>
     </header>
 
     <%- content %>
