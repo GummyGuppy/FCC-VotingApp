@@ -1,0 +1,22 @@
+{
+  "name": "votingapp",
+  "version": "1.0.0",
+  "description": "a dynamic voting application",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Earl Born",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "express-ejs-extend": "0.0.1",
+    "passport": "^0.3.2"
+  }
+}
