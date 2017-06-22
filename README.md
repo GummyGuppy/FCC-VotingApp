@@ -2,7 +2,13 @@
 
 A dynamic voting application that implements the following user stories:
 
+##  Current ToDo's:
+  
+  1) Create multiple Polls using appropriate Schema and display on home page
+  2) Implement Passport.js and finish User Registration 
+  3)
 
+## User Stories
   (completed user stories will have a strikethrough)
 - As an authenticated user, I can keep my polls and come back later to access them.
 - As an authenticated user, I can share my polls with my friends.
