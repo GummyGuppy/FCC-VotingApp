@@ -19,8 +19,42 @@ describe('/', function() {
         res.should.have.status(200)
         done()
       })
+  })
+})
 
+//===== ABOUT ===========
+describe('/about', function(){
 
+  it('should GET /about', (done) => {
+    chai.request('http://localhost:3000')
+    .get('/about')
+    .end((err, res) => {
+      res.should.have.status(200)
+      done()
+    })
+  })
+
+})
+
+describe('/register', function(){
+
+  it('should GET /register', (done) => {
+    chai.request('http://localhost:3000')
+    .get('/register')
+    .end((err, res) => {
+      res.should.have.status(200)
+      done()
+    })
+  })
+
+  it('should POST /register', (done) => {
+    chai.request('http://localhost:3000')
+    .post('/register')
+    .send({'username': 'test', 'password': 'test'})
+    .end((err, res) => {
+      res.should.have.status(200)
+      done()
+    })
   })
 
 

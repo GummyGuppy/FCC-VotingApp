@@ -4,13 +4,21 @@ const express = require('express'),
       ejs = require('ejs'),
       path = require('path'),
       mongoose = require('mongoose'),
-      config = require('./config/database')
+      config = require('./config/database'),
+      bodyParser = require('body-parser')
 
 const app = express()
 
 //bring in models
 let poll = require('./models/poll'),
     user = require('./models/user')
+
+//==== Body Parser Middleware =========
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+// parse application/json
+app.use(bodyParser.json())
+//======================================
 
 //set view engine
 app.engine('ejs', require('express-ejs-extend'))
