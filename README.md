@@ -7,9 +7,9 @@ A dynamic voting application that is inspired by the FreeCodeCamp Voting Applica
 
 ##  Current ToDo's:
   
-  1)  Create multiple Polls using appropriate Schema and display on home page
-  2)  Implement Passport.js and finish User Registration 
-  3)  Update testing implementations for all routes
+  1)  Develop Poll schema, model, and properly learn how to manupulate data from the database.
+  2) Implement the data into a new barchart
+
 
 ## User Stories
   (completed user stories will have a strikethrough)
