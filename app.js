@@ -10,8 +10,8 @@ const express = require('express'),
 const app = express()
 
 //bring in models
-let poll = require('./models/poll'),
-    user = require('./models/user')
+let Poll = require('./models/poll')
+
 
 //==== Body Parser Middleware =========
 // parse application/x-www-form-urlencoded
@@ -39,16 +39,48 @@ db.on('error', (err) => {
 
 //=== home routes ======================
 app.get('/', (req, res) => {
-  res.render('login')
+
+  res.render('create')
+
 })
 
-app.get('/about', (req, res) => {
-  res.render('about')
+app.get('/dashboard', (req, res) => {
+
+    Poll.find({}, (err, polls) => {
+      console.log('found polls')
+      res.render('dashboard', {polls:polls})
+    })
 })
 
-//import routes
-let users = require('./routes/users')
-app.use('/', users)
+app.post('/poll/create', (req, res) => {
+
+let myPoll = new Poll({
+  title: req.body.title,
+  author: req.body.author,
+  data: {
+    labels: req.body.labels,
+    datasets: {
+      label: req.body.dLabel,
+      data: [req.body.dData, req.body.dData2],
+      backgroundColor: ['rgba(245, 233, 19, 0.58)','rgba(245, 233, 19, 0.58)']
+    }
+
+  }
+})
+
+  myPoll.save((err) => {
+    (err) ? console.log(err) :
+      console.log('success')
+
+  })
+
+  Poll.find({}, (err, polls) => {
+    console.log('found polls')
+    res.render('dashboard', {polls:polls})
+  })
+
+
+})
 
 
 

@@ -1,0 +1,42 @@
+<%# views/login.ejs %>
+
+<% extend('layout') %>
+<h1>Create Poll</h1>
+
+
+<div class='container'>
+  <form class="form-group" action='/poll/create' method="post">
+
+
+  <label for="title">Poll Name</label>
+  <input type='text' name='title' method='post'>
+
+  <label for="author">Author</label>
+  <input type='text' name='author' method='post'>
+
+  <label for="labels">Labels</label>
+  <input type='text' name='labels' method='post'>
+
+  <label for="dLabel">Datasets Label</label>
+  <input type='text' name='dLabel' method='post'>
+
+  <label for="dData">Datasets Data</label>
+  <input type='text' name='dData' method='post'>
+
+  <label for="dData2">Datasets Data</label>
+  <input type='text' name='dData2' method='post'>
+
+  <label for="dBackground">Background color 1</label>
+  <input type='text' name='dBackground' method='post'>
+
+  <label for="dBackground2">Background color 2</label>
+  <input type='text' name='dBackground2' method='post'>
+
+
+
+  <br>
+  <button class='btn btn-primary' type="submit" name="submit">Submit</button>
+
+
+  </form>
+</div>

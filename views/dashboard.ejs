@@ -2,6 +2,10 @@
 
 <% extend('layout') %>
 
-<h3>Your active polls</h3>
+<% for(var i = 0; i < polls.length; i++) { %>
 
-<h3>All polls</h3>
+  <li>Title: <%= polls[i].title %></li>
+
+  <li>Author: <%= polls[i].author %></li>
+
+<% } %>

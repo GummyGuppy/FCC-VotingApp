@@ -7,7 +7,15 @@ let pollSchema = new Schema({
 
   title: String,
   author: String,
-  data: Array
+  data: {
+    labels: Array,
+    datasets: {
+      label: String,
+      data: Array,
+      backgroundColor: Array
+    }
+
+  }
 
 })
 
