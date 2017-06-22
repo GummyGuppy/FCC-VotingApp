@@ -4,8 +4,8 @@ A dynamic voting application that implements the following user stories:
 
 ##  Current ToDo's:
   
-  1) Create multiple Polls using appropriate Schema and display on home page
-  2) Implement Passport.js and finish User Registration 
+  1)  Create multiple Polls using appropriate Schema and display on home page
+  2)  Implement Passport.js and finish User Registration 
   3)
 
 ## User Stories
