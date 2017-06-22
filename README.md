@@ -17,9 +17,11 @@ A dynamic voting application that implements the following user stories:
 
 ## Technologies:
 
+![alt-text]()
+
 ![alt text](http://mean.io/wp-content/themes/twentysixteen-child/images/express.png "")
 ![alt-text](http://mongodb-tools.com/img/mongoose.png "")
-- Passport
+![alt-text](http://meganelizabethsmith.com/public/imgs/passportjs.png)
 - EJS (Viewing engine)
 
 ## Testing Tools
