@@ -1,6 +1,6 @@
 # FCC-VotingApp
 
-A dynamic voting application that implements the following user stories:
+A dynamic voting application that is inspired by the FreeCodeCamp Voting Application project. 
 
 ##  Current ToDo's:
   
@@ -20,6 +20,8 @@ A dynamic voting application that implements the following user stories:
 - As an authenticated user, if I don't like the options on a poll, I can create a new option.
 
 
+#####The database is hosted by mlab.com, a MongoDB DaaS website.
+
 
 ## Technologies:
 
@@ -27,7 +29,7 @@ A dynamic voting application that implements the following user stories:
 ![alt text](http://mean.io/wp-content/themes/twentysixteen-child/images/express.png "")
 ![alt-text](http://mongodb-tools.com/img/mongoose.png "")
 ![alt-text](http://meganelizabethsmith.com/public/imgs/passportjs.png "")
-![](https://mlab.com/company/brand/img/downloads/mLab-logo-onlight.png "")
+
 
 ## Testing Tools:
 
