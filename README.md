@@ -22,7 +22,7 @@ A dynamic voting application that implements the following user stories:
 ![alt-text](http://mongodb-tools.com/img/mongoose.png "")
 ![alt-text](http://meganelizabethsmith.com/public/imgs/passportjs.png "")
 
-## Testing Tools
+## Testing Tools:
 
 ![alt-text](https://onsen.io/blog/content/images/2015/Aug/chaijs-mocha.png)
 
