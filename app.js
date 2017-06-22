@@ -37,7 +37,6 @@ db.on('error', (err) => {
   throw err
 })
 
-//======================================
 //=== home routes ======================
 app.get('/', (req, res) => {
   res.render('login')

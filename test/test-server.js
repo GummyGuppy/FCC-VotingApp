@@ -35,9 +35,10 @@ describe('/about', function(){
   })
 
 })
-
+//===== REGISTER ==========
 describe('/register', function(){
 
+  //REGISTER GET
   it('should GET /register', (done) => {
     chai.request('http://localhost:3000')
     .get('/register')
@@ -46,7 +47,7 @@ describe('/register', function(){
       done()
     })
   })
-
+  //REGISTER POST
   it('should POST /register', (done) => {
     chai.request('http://localhost:3000')
     .post('/register')

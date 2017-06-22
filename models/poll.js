@@ -7,10 +7,7 @@ let pollSchema = new Schema({
 
   title: String,
   author: String,
-  poll: {
-    valueOne: Number,
-    ValueTwo: Number
-  }
+  data: Array
 
 })
 
