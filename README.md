@@ -26,7 +26,6 @@ A dynamic voting application that implements the following user stories:
 
 ## Testing Tools
 
-- Mocha
-- Chai
-- Chai-http
+![alt-text](https://onsen.io/blog/content/images/2015/Aug/chaijs-mocha.png)
+
 
