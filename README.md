@@ -27,7 +27,7 @@ A dynamic voting application that implements the following user stories:
 ![alt text](http://mean.io/wp-content/themes/twentysixteen-child/images/express.png "")
 ![alt-text](http://mongodb-tools.com/img/mongoose.png "")
 ![alt-text](http://meganelizabethsmith.com/public/imgs/passportjs.png "")
-![]('https://mlab.com/company/brand/img/downloads/mLab-logo-onlight.png' "")
+![](https://mlab.com/company/brand/img/downloads/mLab-logo-onlight.png "")
 
 ## Testing Tools:
 
