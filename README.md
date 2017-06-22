@@ -17,7 +17,7 @@ A dynamic voting application that implements the following user stories:
 
 ## Technologies:
 
-- Express.js
+- ![alt text](http://mean.io/wp-content/themes/twentysixteen-child/images/express.png "Logo Title Text 1")
 - Mongoose
 - Passport
 - EJS (Viewing engine)
