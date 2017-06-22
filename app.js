@@ -6,14 +6,11 @@ const express = require('express'),
       mongoose = require('mongoose'),
       config = require('./config/database')
 
-
 const app = express()
 
 //bring in models
 let poll = require('./models/poll'),
     user = require('./models/user')
-
-
 
 //set view engine
 app.engine('ejs', require('express-ejs-extend'))
@@ -33,7 +30,7 @@ db.on('error', (err) => {
 })
 
 //======================================
-
+//=== home routes ======================
 app.get('/', (req, res) => {
   res.render('login')
 })
