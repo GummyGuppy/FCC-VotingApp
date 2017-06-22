@@ -9,7 +9,7 @@ A dynamic voting application that is inspired by the FreeCodeCamp Voting Applica
   
   1)  Create multiple Polls using appropriate Schema and display on home page
   2)  Implement Passport.js and finish User Registration 
-  3)
+  3)  Update testing implementations for all routes
 
 ## User Stories
   (completed user stories will have a strikethrough)
