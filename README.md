@@ -2,6 +2,9 @@
 
 A dynamic voting application that is inspired by the FreeCodeCamp Voting Application project. 
 
+##### The database is hosted by mlab.com, a MongoDB DaaS website.
+
+
 ##  Current ToDo's:
   
   1)  Create multiple Polls using appropriate Schema and display on home page
@@ -19,8 +22,6 @@ A dynamic voting application that is inspired by the FreeCodeCamp Voting Applica
 - As an unauthenticated or authenticated user, I can see the results of polls in chart form. (This could be implemented using Chart.js or Google Charts.)
 - As an authenticated user, if I don't like the options on a poll, I can create a new option.
 
-
-##### The database is hosted by mlab.com, a MongoDB DaaS website.
 
 
 ## Technologies:
