@@ -4,9 +4,11 @@ const express = require('express'),
       ejs = require('ejs'),
       path = require('path'),
       mongoose = require('mongoose'),
-      config = require('./config/database'),
-      bodyParser = require('body-parser')
+      bodyParser = require('body-parser'),
+      Chart = require('chartjs')
 
+//import config
+const config = require('./config/database')
 const app = express()
 
 //bring in models
@@ -55,14 +57,13 @@ app.get('/dashboard', (req, res) => {
 app.post('/poll/create', (req, res) => {
 
 let myPoll = new Poll({
-  title: req.body.title,
-  author: req.body.author,
+  type: req.body.type,
   data: {
     labels: req.body.labels,
     datasets: {
       label: req.body.dLabel,
       data: [req.body.dData, req.body.dData2],
-      backgroundColor: ['rgba(245, 233, 19, 0.58)','rgba(245, 233, 19, 0.58)']
+      backgroundColor: [req.body.dBackground, req.body.dBackground2]
     }
 
   }
