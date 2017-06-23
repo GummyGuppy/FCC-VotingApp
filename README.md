@@ -7,8 +7,9 @@ A dynamic voting application that is inspired by the FreeCodeCamp Voting Applica
 
 ##  Current ToDo's:
   
-  1)  Develop Poll schema, model, and properly learn how to manupulate data from the database.
-  2) Implement the data into a new barchart
+  1) Read RequireJS API documenation and implement a plan for server side rendering of poll data 
+  2)
+  3)
 
 
 ## User Stories
