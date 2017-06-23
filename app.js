@@ -38,22 +38,15 @@ db.on('error', (err) => {
   throw err
 })
 
-//=== home routes ======================
+//======= LANDING PAGE ============
 app.get('/', (req, res) => {
 
   res.render('create')
 
 })
 
-app.get('/dashboard', (req, res) => {
 
-    Poll.find({}, (err, polls) => {
-      console.log('found polls')
-      res.render('dashboard', {polls:polls})
-    })
-})
-
-app.post('/poll/create', (req, res) => {
+app.post('/', (req, res) => {
 
 let myPoll = new Poll({
   type: req.body.type,
@@ -67,13 +60,13 @@ let myPoll = new Poll({
 
   }
 })
-
+  //save data to db
   myPoll.save((err) => {
     (err) ? console.log(err) :
       console.log('success')
 
   })
-
+  //find all polls and render dashboard
   Poll.find({}, (err, polls) => {
     console.log('found polls')
     res.render('dashboard', {polls: polls})
@@ -81,6 +74,16 @@ let myPoll = new Poll({
 
 
 })
+
+//======== DASHBOARD ==============
+app.get('/dashboard', (req, res) => {
+
+    Poll.find({}, (err, polls) => {
+      console.log('found polls')
+      res.render('dashboard', {polls:polls})
+    })
+})
+
 
 
 

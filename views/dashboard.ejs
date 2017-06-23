@@ -4,12 +4,19 @@
 
 <% for(var i = 0; i < polls.length; i++){ %>
 
-  <h4>polls is: <%= JSON.stringify(polls[i]) %></h4>
+  <p>polls is: <%= JSON.stringify(polls[i]) %></p>
 
-<% } %>
 
 <canvas id="myChart"></canvas>
 
-<script>
+
+<script src='bundle.js'>
+
+let Poll = require('./models/poll')
+
+console.log(Poll)
 
 </script>
+
+
+<% } %>

@@ -6,12 +6,13 @@ const mocha = require('mocha'),
       server = require('../app'),
       should = chai.should()
 
-
 chai.use(chaiHttp)
+
 
 //===== HOME ========
 describe('/', function() {
 
+  //LANDING PAGE GET
   it('should GET /', (done) => {
     chai.request('http://localhost:3000')
       .get('/')
@@ -25,6 +26,7 @@ describe('/', function() {
 //===== ABOUT ===========
 describe('/about', function(){
 
+  //ABOUT GET
   it('should GET /about', (done) => {
     chai.request('http://localhost:3000')
     .get('/about')
