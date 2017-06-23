@@ -2,38 +2,14 @@
 
 <% extend('layout') %>
 
-<% for(var i = 0; i < polls.length; i++) { %>
+<% for(var i = 0; i < polls.length; i++){ %>
 
+  <h4>polls is: <%= JSON.stringify(polls[i]) %></h4>
 
-<p><%=polls[i].data.labels%></p>
+<% } %>
 
-<canvas id="myChart" width="150" height="150"></canvas>
+<canvas id="myChart"></canvas>
 
 <script>
 
-'use strict'
-
-const Chart = require('chartjs')
-
-let ctx = document.getElementById('myChart').getContext('2d')
-
-let myChart = new Chart(ctx, {
-
-  type: polls[i].type,
-  data: {
-    labels: polls[i].data.labels,
-    datasets: {
-      label: polls[i].data.datasets.label,
-      data: polls[i].data.datasets.data,
-      backgroundColor: polls[i].data.datasets.backgroundColor,
-      borderWidth: 1,
-      borderColor: #777
-    }
-  }
-})
-
-
-
 </script>
-
-<% } %>

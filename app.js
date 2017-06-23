@@ -4,8 +4,7 @@ const express = require('express'),
       ejs = require('ejs'),
       path = require('path'),
       mongoose = require('mongoose'),
-      bodyParser = require('body-parser'),
-      Chart = require('chartjs')
+      bodyParser = require('body-parser')
 
 //import config
 const config = require('./config/database')
@@ -59,7 +58,7 @@ app.post('/poll/create', (req, res) => {
 let myPoll = new Poll({
   type: req.body.type,
   data: {
-    labels: req.body.labels,
+    labels: [req.body.labels],
     datasets: {
       label: req.body.dLabel,
       data: [req.body.dData, req.body.dData2],
@@ -77,7 +76,7 @@ let myPoll = new Poll({
 
   Poll.find({}, (err, polls) => {
     console.log('found polls')
-    res.render('dashboard', {polls:polls})
+    res.render('dashboard', {polls: polls})
   })
 
 
