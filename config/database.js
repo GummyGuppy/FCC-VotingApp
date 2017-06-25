@@ -1,4 +1,4 @@
 module.exports = {
-  database: 'mongodb://admin:admin@ds133922.mlab.com:33922/pollit',
+  database: 'mongodb://admin:admin@ds135522.mlab.com:35522/chart',
   secret: 'yoursecret'
 }

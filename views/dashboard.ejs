@@ -2,21 +2,15 @@
 
 <% extend('layout') %>
 
-<% for(var i = 0; i < polls.length; i++){ %>
-
-  <p>polls is: <%= JSON.stringify(polls[i]) %></p>
+<% for(var i = 0; i < polls.length; i++) { %>
 
 
-<canvas id="myChart"></canvas>
-
-
-<script src='bundle.js'>
-
-let Poll = require('./models/poll')
-
-console.log(Poll)
-
-</script>
-
+  <p>poll labels are: <%= polls[i].labels %></p>
+  <p>poll data is: <%= polls[i].data %></p>
 
 <% } %>
+
+<script>
+
+console.log('<%=polls[0].labels%>')
+</script>

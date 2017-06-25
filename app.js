@@ -13,7 +13,6 @@ const app = express()
 //bring in models
 let Poll = require('./models/poll')
 
-
 //==== Body Parser Middleware =========
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -45,47 +44,27 @@ app.get('/', (req, res) => {
 
 })
 
-
 app.post('/', (req, res) => {
 
-let myPoll = new Poll({
-  type: req.body.type,
-  data: {
-    labels: [req.body.labels],
-    datasets: {
-      label: req.body.dLabel,
-      data: [req.body.dData, req.body.dData2],
-      backgroundColor: [req.body.dBackground, req.body.dBackground2]
-    }
+  let labels = req.body.labels.split(','),
+      data = req.body.data.split(',')
 
-  }
-})
-  //save data to db
+  let query = {labels: labels,
+      data: data}
+
+  let myPoll = new Poll(query)
   myPoll.save((err) => {
-    (err) ? console.log(err) :
-      console.log('success')
-
+    (err) ? console.log(err) : res.redirect('dashboard')
   })
-  //find all polls and render dashboard
-  Poll.find({}, (err, polls) => {
-    console.log('found polls')
-    res.render('dashboard', {polls: polls})
-  })
-
-
 })
 
 //======== DASHBOARD ==============
 app.get('/dashboard', (req, res) => {
 
-    Poll.find({}, (err, polls) => {
-      console.log('found polls')
-      res.render('dashboard', {polls:polls})
-    })
+  Poll.find({}, (err, polls) => {
+    (err) ? console.log(err) : res.render('dashboard', {polls})
+  })
 })
-
-
-
 
 app.listen(3000, () => {
   console.log('started server on port 3000')
