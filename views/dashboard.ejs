@@ -7,10 +7,10 @@
 
 
 
-<canvas id='myChart' width="300" height="300"></canvas>
+
 
 <% for(var i = 0; i < polls.length; i++) { %>
-
+<canvas id='<%=i%>' width="300" height="300"></canvas>
 
 <script>
 
@@ -21,7 +21,7 @@ splitMe = function (string) {
 data = splitMe('<%= polls[i].data %>')
 labels = splitMe('<%= polls[i].labels %>')
 
-var ctx = document.getElementsById('myChart')
+var ctx = document.getElementById('<%=i%>')
 new Chart(ctx, {
     type: 'bar',
     data: {
