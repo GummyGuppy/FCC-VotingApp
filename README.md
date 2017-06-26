@@ -7,8 +7,8 @@ A dynamic voting application that is inspired by the FreeCodeCamp Voting Applica
 
 ##  Current ToDo's:
   
-  1) Read RequireJS API documenation and implement a plan for server side rendering of poll data 
-  2)
+  1) Add more user functionality pertaining to creation of charts 
+  2) Organize front-end dashboard.ejs
   3)
 
 
