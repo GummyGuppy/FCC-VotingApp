@@ -5,6 +5,7 @@ const mongoose = require('mongoose'),
 
 let pollSchema = new Schema({
 
+  name: String,
   labels: Array,
   data: Array
 

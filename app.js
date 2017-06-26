@@ -46,11 +46,12 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
 
-  let labels = req.body.labels.split(','),
+  let name = req.body.pollName,
+      labels = req.body.labels.split(','),
       data = req.body.data.split(',')
 
   let query = {labels: labels,
-      data: data}
+      data: data, name: name}
 
   let myPoll = new Poll(query)
   myPoll.save((err) => {
@@ -58,14 +59,20 @@ app.post('/', (req, res) => {
   })
 })
 
-//======== DASHBOARD ==============
-app.get('/dashboard', (req, res) => {
+//===== CREATE ===============
 
+app.get('/create', (req, res) => {
+  res.render('create')
+})
+
+//===== ACTIVE POLLS ==========
+app.get('/polls', (req, res) => {
   Poll.find({}, (err, polls) => {
     (err) ? console.log(err) : res.render('dashboard', {polls})
   })
 })
 
+//===========
 app.listen(3000, () => {
   console.log('started server on port 3000')
 })

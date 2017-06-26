@@ -3,15 +3,12 @@
 <% extend('layout') %>
 
 <!-- declare variables outside of loop -->
-<script>let data, labels</script>
-
-
-
-
+<script>let data, labels, pollName</script>
 
 <% for(var i = 0; i < polls.length; i++) { %>
-<canvas id='<%=i%>' width="300" height="300"></canvas>
-
+  <div class='chartDiv'>
+<canvas id='<%=i%>' width="500" height="300"></canvas>
+<p class='pollDescription'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 <script>
 
 splitMe = function (string) {
@@ -20,6 +17,7 @@ splitMe = function (string) {
 
 data = splitMe('<%= polls[i].data %>')
 labels = splitMe('<%= polls[i].labels %>')
+name = '<%=polls[i].name %>'
 
 var ctx = document.getElementById('<%=i%>')
 new Chart(ctx, {
@@ -27,7 +25,7 @@ new Chart(ctx, {
     data: {
         labels: labels,
         datasets: [{
-            label: 'Poll',
+            label: name,
             data: data,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -60,5 +58,5 @@ new Chart(ctx, {
 });
 
 </script>
-
+</div>
 <% } %>

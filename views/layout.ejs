@@ -27,7 +27,7 @@
       }
 
       canvas {
-        max-width: 350px;
+        max-width: 50%;
         max-height: 350px;
       }
 
@@ -38,6 +38,18 @@
         align-items: center;
         }
 
+        .chartDiv{
+          display:flex;
+
+        }
+
+        .pollDescription{
+          margin-left: 30px;
+          margin-top: 20px;
+          padding-right: 10px;
+          font-family: Verdana;
+          font-size: 25px
+        }
 
     </style>
 
@@ -47,7 +59,7 @@
 
   </head>
   <body>
-    
+
     <header>
       <nav class="navbar navbar-inverse">
         <div>
@@ -56,8 +68,8 @@
         <div>
         <ul class="nav navbar-nav stuff">
           <li><a href="/about">About</a></li>
-          <li><a href="/register">Register</a></li>
-          <li><a href="/poll/create">Create Poll</a></li>
+          <li><a href="/polls">Active Polls</a></li>
+          <li><a href="/create">Create Poll</a></li>
         </ul>
         </div>
 
